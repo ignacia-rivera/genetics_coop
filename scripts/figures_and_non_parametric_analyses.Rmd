@@ -1,0 +1,787 @@
+---
+title: "No association between genetic variants in <i>MAOA, OXTR,</i> and <i>AVPR1a</i> and cooperative strategies"
+author: "Maria I. Rivera-Hechem"
+date: 
+output: html_document
+---
+
+```{r data libraries }
+
+library(tidyverse)
+library(here)
+library(gridExtra)
+library(lubridate)
+library(foreign)
+library(readr)
+library(extrafont)
+library(kableExtra)
+
+```
+
+```{r importing data, include=FALSE}
+
+DB_Classificated <- read.csv(here::here("data/DB_Classificated.csv"), na.strings = "")
+
+# Storing data as .dta for analyses in stata
+#write.dta(DB_Classificated, here("data/DB_Classificated.dta"))
+
+# Renamig maoa categories
+DB_Classificated <- DB_Classificated %>% 
+  mutate(maoa= ifelse(maoa == "4.5/4.5 repeats", "High", ifelse(maoa == "3.5/3.5 repeats", 'Low', NA)))
+
+```
+
+## Results 
+```{r Table 1. Distribution of strategies per gender and FR criterion, echo = FALSE}
+
+coop_strateg_female_10 <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(type_10_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_male_10 <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(type_10_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_female_20 <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(type_20_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_male_20 <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(type_20_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_female_30 <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(type_30_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_male_30 <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(type_30_001) %>% 
+  summarise(freq = n()) %>% 
+  mutate(percentage = (freq*100)/sum(freq))
+
+coop_strateg_female <- cbind.data.frame(cooperative_strategy = coop_strateg_female_10$type_10_001, cont_less_10 = coop_strateg_female_10$percentage, cont_less_20 = coop_strateg_female_20$percentage, cont_less_30 = coop_strateg_female_30$percentage) %>% 
+  mutate_if(is.numeric, round, 2)
+
+coop_strateg_male <- cbind.data.frame(cooperative_strategy = coop_strateg_male_10$type_10_001, cont_less_10 = coop_strateg_male_10$percentage, cont_less_20 = coop_strateg_male_20$percentage, cont_less_30 = coop_strateg_male_30$percentage) %>% 
+  mutate_if(is.numeric, round, 2)
+
+coop_strateg_female
+coop_strateg_male
+
+```
+
+```{r Fisher exact test strategies distirbution ~ sex, echo= FALSE}
+
+fisher.test(DB_Classificated$gender, DB_Classificated$type_20_001)
+
+```
+
+```{r Figure 1. Average profile for each type of strategy, echo = FALSE}
+
+Profiles <- DB_Classificated %>% 
+  group_by(type_20_001) %>% 
+  summarise("0"=mean(coop_inf_0), '1'=mean(coop_inf_1), '2' =mean(coop_inf_2), '3'=mean(coop_inf_3), '4'=mean(coop_inf_4), '5'=mean(coop_inf_5), '6'=mean(coop_inf_6), '7'=mean(coop_inf_7), '8'=mean(coop_inf_8), '9'=mean(coop_inf_9), '10'=mean(coop_inf_10), '11'=mean(coop_inf_11), '12'=mean(coop_inf_12), '13'= mean(coop_inf_13), '14'= mean(coop_inf_14), '15'=mean(coop_inf_15),'16' =mean(coop_inf_16), '17'=mean(coop_inf_17), '18'=mean(coop_inf_18), '19'=mean(coop_inf_19), '20'=mean(coop_inf_20)) %>%
+  gather("ot_contr", "Contr", 2:22) 
+
+
+Fig1 <- ggplot(Profiles, aes(x=as.numeric(ot_contr), y=Contr, colour=type_20_001)) + 
+  geom_line(size = 0.71)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  scale_color_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        axis.title=element_text(size= 10, family="Arial", face = "bold"),
+        legend.position = "bottom", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10), 
+        legend.spacing.x = unit(0.07, 'cm'))
+
+Fig1
+
+#ggsave("Fig1.tiff", width = 11, height = 11, units = "cm", dpi=300, path = here::here("figures"))
+
+```
+
+```{r Figure 2. Distribution of cooperative strategies by genotype, echo = FALSE}
+
+#FEMALES
+
+DB_oxtr_females <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(oxtr, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(oxtr == 'NA'))
+
+p1 <- ggplot(data = DB_oxtr_females, aes(x = oxtr, y = Percentage, fill = type_20_001)) + 
+  scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    geom_bar(stat= "identity")+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Percentage (%)", x="OXTR genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(), 
+          plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+DB_avpr_females <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(avpr1_341, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(avpr1_341 == 'NA'))
+
+p2 <- ggplot(data = DB_avpr_females, aes(x = avpr1_341, y = Percentage, fill = type_20_001)) + 
+ scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    geom_bar(stat= "identity")+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Frequency (n)", x="AVPR1 genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(), 
+          plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+
+DB_maoa_females <- DB_Classificated %>% 
+  filter(gender== 'female') %>% 
+  group_by(maoa, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(maoa == 'NA'))
+
+p3 <- ggplot(data = DB_maoa_females, aes(x = maoa, y = Percentage, fill = type_20_001)) + 
+ scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    geom_bar(stat= "identity")+
+    labs(fill ='Cooperative type')+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Frequency (n)", x="MAOA genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(),
+          plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+
+#MALES
+
+DB_oxtr_males <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(oxtr, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(oxtr == 'NA'))
+
+p4 <- ggplot(data = DB_oxtr_males, aes(x = oxtr, y = Percentage, fill = type_20_001)) + 
+  scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    geom_bar(stat= "identity")+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Percentage (%)", x="OXTR genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(),
+          plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+
+
+DB_avpr_males <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(avpr1_341, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(avpr1_341 == 'NA'))
+
+p5 <- ggplot(data = DB_avpr_males, aes(x = avpr1_341, y = Percentage, fill = type_20_001)) + 
+    geom_bar(stat= "identity")+
+    scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Frequency (n)", x="AVPR1 genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(), 
+          plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+
+
+DB_maoa_males <- DB_Classificated %>% 
+  filter(gender== 'male') %>% 
+  group_by(maoa, type_20_001) %>% 
+  summarise(sample.size = n()) %>% 
+  mutate(Percentage = sample.size*100/sum(sample.size)) %>% 
+  filter(!(maoa == 'NA'))
+
+p6 <- ggplot(data = DB_maoa_males, aes(x = maoa, y = Percentage, fill = type_20_001)) + 
+    geom_bar(stat= "identity")+
+    scale_fill_manual(values= c('steelblue4', 'indianred1','cyan3','navajowhite2'))+
+    labs(fill ='Cooperative type')+
+    scale_y_continuous(expand = c(0, 0)) +
+    labs(y="Frequency (n)", x="MAOA genotype")+
+    theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+          panel.grid = element_blank(),
+          axis.text=element_text(size=8, family = "Arial"),
+          axis.title=element_blank(),
+          legend.position = "none", 
+          legend.title=element_blank(),
+          plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+
+grid.arrange(p1,p2,p3,p4,p5,p6, ncol= 3, nrow =2)
+
+#ggsave("Fig2.tiff", plot =Fig2, width = 17, height = 11, units = "cm", dpi=600, path = here::here("figures"))
+
+```
+
+```{r Fisher exact test strategies with classification criteria FR = 20% ~ genotype, echo = FALSE}
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in women
+
+dta_women<- DB_Classificated %>% 
+  filter(gender =='female') %>% 
+  select(avpr1_341, oxtr, maoa, type_20_001)
+
+lapply(dta_women[,-4], function(i) fisher.test(i, dta_women$type_20_001))
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in men
+
+dta_men<- DB_Classificated %>% 
+  filter(gender =='male') %>% 
+  select(avpr1_341, oxtr, maoa, type_20_001)
+
+lapply(dta_men[,-4], function(i) fisher.test(i, dta_men$type_20_001))
+
+```
+
+```{r Fisher exact test strategies with classification criteria FR = 10% ~ genotype, echo = FALSE}
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in women
+
+dta_women<- DB_Classificated %>% 
+  filter(gender =='female') %>% 
+  select(avpr1_341, oxtr, maoa, type_10_001)
+
+lapply(dta_women[,-4], function(i) fisher.test(i, dta_women$type_10_001))
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in men
+
+dta_men<- DB_Classificated %>% 
+  filter(gender =='male') %>% 
+  select(avpr1_341, oxtr, maoa, type_10_001)
+
+lapply(dta_men[,-4], function(i) fisher.test(i, dta_men$type_10_001))
+
+```
+
+```{r Fisher exact test strategies with classification criteria FR = 30% ~ genotype, echo = FALSE}
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in women
+
+dta_women<- DB_Classificated %>% 
+  filter(gender =='female') %>% 
+  select(avpr1_341, oxtr, maoa, type_30_001)
+
+lapply(dta_women[,-4], function(i) fisher.test(i, dta_women$type_30_001))
+
+# Fisher exact test to test significant differences in strategy counts among genotypes for each variant in men
+
+dta_men<- DB_Classificated %>% 
+  filter(gender =='male') %>% 
+  select(avpr1_341, oxtr, maoa, type_30_001)
+
+lapply(dta_men[,-4], function(i) fisher.test(i, dta_men$type_30_001))
+
+```
+```{r Figure 3. Average strategy by genotype, echo = FALSE}
+
+DB_oxtr <- DB_Classificated %>% 
+  filter(!(oxtr=='NA')) %>% 
+  group_by(oxtr, gender) %>% 
+  summarise("0"=mean(coop_inf_0), '1'=mean(coop_inf_1), '2' =mean(coop_inf_2), '3'=mean(coop_inf_3), '4'=mean(coop_inf_4), '5'=mean(coop_inf_5), '6'=mean(coop_inf_6), '7'=mean(coop_inf_7), '8'=mean(coop_inf_8), '9'=mean(coop_inf_9), '10'=mean(coop_inf_10), '11'=mean(coop_inf_11), '12'=mean(coop_inf_12), '13'= mean(coop_inf_13), '14'= mean(coop_inf_14), '15'=mean(coop_inf_15),'16' =mean(coop_inf_16), '17'=mean(coop_inf_17), '18'=mean(coop_inf_18), '19'=mean(coop_inf_19), '20'=mean(coop_inf_20)) %>%
+  gather("ot_contr", "Contr", 3:23) 
+  
+
+DB_avpr1 <- DB_Classificated %>% 
+  filter(!(avpr1_341=='NA')) %>% 
+  group_by(avpr1_341, gender) %>% 
+ summarise("0"=mean(coop_inf_0), '1'=mean(coop_inf_1), '2' =mean(coop_inf_2), '3'=mean(coop_inf_3), '4'=mean(coop_inf_4), '5'=mean(coop_inf_5), '6'=mean(coop_inf_6), '7'=mean(coop_inf_7), '8'=mean(coop_inf_8), '9'=mean(coop_inf_9), '10'=mean(coop_inf_10), '11'=mean(coop_inf_11), '12'=mean(coop_inf_12), '13'= mean(coop_inf_13), '14'= mean(coop_inf_14), '15'=mean(coop_inf_15),'16' =mean(coop_inf_16), '17'=mean(coop_inf_17), '18'=mean(coop_inf_18), '19'=mean(coop_inf_19), '20'=mean(coop_inf_20)) %>%
+  gather("ot_contr", "Contr", 3:23) 
+
+
+DB_maoa <- DB_Classificated %>% 
+  filter(!(maoa=='NA')) %>% 
+  group_by(maoa, gender) %>% 
+ summarise("0"=mean(coop_inf_0), '1'=mean(coop_inf_1), '2' =mean(coop_inf_2), '3'=mean(coop_inf_3), '4'=mean(coop_inf_4), '5'=mean(coop_inf_5), '6'=mean(coop_inf_6), '7'=mean(coop_inf_7), '8'=mean(coop_inf_8), '9'=mean(coop_inf_9), '10'=mean(coop_inf_10), '11'=mean(coop_inf_11), '12'=mean(coop_inf_12), '13'= mean(coop_inf_13), '14'= mean(coop_inf_14), '15'=mean(coop_inf_15),'16' =mean(coop_inf_16), '17'=mean(coop_inf_17), '18'= mean(coop_inf_18), '19'=mean(coop_inf_19), '20'=mean(coop_inf_20)) %>%
+  gather("ot_contr", "Contr", 3:23) 
+
+
+
+oxtr_female <- ggplot(filter(DB_oxtr, gender == 'female'), aes(x=as.numeric(ot_contr), y=Contr, colour=oxtr)) + 
+  geom_line(size = 0.75)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+oxtr_male <- ggplot(filter(DB_oxtr, gender == 'male'), aes(x=as.numeric(ot_contr), y=Contr, colour=oxtr)) + 
+  geom_line(size = 0.8)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        #legend.text=element_text(size= 8), 
+        #legend.spacing.x = unit(0.07, 'cm'))
+        plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+avpr1_female <- ggplot(filter(DB_avpr1, gender == 'female'), aes(x=as.numeric(ot_contr), y=Contr, colour=avpr1_341)) + 
+  geom_line(size = 0.8)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+avpr1_male <- ggplot(filter(DB_avpr1, gender == 'male'), aes(x=as.numeric(ot_contr), y=Contr, colour=avpr1_341)) + 
+  geom_line(size = 0.8)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        #legend.text=element_text(size= 8), 
+        #legend.spacing.x = unit(0.07, 'cm'))
+        plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+maoa_female <- ggplot(filter(DB_maoa, gender == 'female'), aes(x=as.numeric(ot_contr), y=Contr, colour=maoa))+
+  geom_line(size = 0.8)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),
+        plot.margin = unit(c(0.3, 0.3, 0.3, 0.3), "cm"))
+
+maoa_male <- ggplot(filter(DB_maoa, gender == 'male'), aes(x=as.numeric(ot_contr), y=Contr, colour=maoa)) + 
+  geom_line(size = 0.8)+
+  scale_color_manual(values= c('#061A40', '#0353A4','cornflowerblue'))+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  scale_y_continuous(limits= c(0,20), breaks=c(0,5,10,15,20), expand = c(0,0)) +
+  labs(y="Average contribution", x="Others' average contribution")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid = element_blank(),
+        axis.text=element_text(size=8, family = "Arial"),
+        axis.title=element_blank(),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        #legend.text=element_text(size= 8), 
+        #legend.spacing.x = unit(0.07, 'cm'))
+        plot.margin = unit(c(0.1, 0.3, 0.3, 0.3), "cm"))
+
+Fig3 <- grid.arrange(oxtr_female, avpr1_female, maoa_female, oxtr_male, avpr1_male, maoa_male, nrow=2, ncol=3)
+
+#ggsave("Fig3.tiff", plot =Fig3, width = 17, height = 11, units = "cm", dpi=600, path = here::here("figures"))
+
+```
+
+```{r Kruskal Wallis mean contribution level ~ genotype under different cooperative scenarios, echo = FALSE}
+
+Cont_stages <- DB_Classificated %>% 
+  mutate(low = (coop_inf_0+coop_inf_1+coop_inf_2+coop_inf_3+coop_inf_4+coop_inf_5+coop_inf_6)/7, mid= (coop_inf_7+coop_inf_8+coop_inf_9+coop_inf_10+coop_inf_11+coop_inf_12+coop_inf_13)/7, high = (coop_inf_14+ coop_inf_15+coop_inf_16+coop_inf_17+coop_inf_18+coop_inf_19+coop_inf_20)/7)
+
+Cont_stages$oxtr <-  as.factor(Cont_stages$oxtr) 
+Cont_stages$avpr1_341 <-  as.factor(Cont_stages$avpr1_341)
+Cont_stages$maoa <-  as.factor(Cont_stages$maoa )
+
+gender <- c('female', 'male')
+
+
+for(polym in c(3,7,9)){
+
+   for (sex in gender){
+     
+     DB <- subset(Cont_stages, Cont_stages$gender == sex)
+     
+     for (i in c(seq(1:3))) {
+       
+       
+       cont <- DB[,41+i]
+       group <- DB[,polym]
+       df <- data.frame(cont, group)
+       x <- kruskal.test(df[,1], df[,2])
+       
+       print(ifelse(polym == 3, 'oxtr', ifelse(polym==7, 'avpr1', 'maoa')))
+       print(sex)
+       print(ifelse(i == 1, 'low', ifelse(i==2, 'mid', 'high')))
+       print(x)
+       
+     }
+   }
+     
+}
+  
+```
+
+```{r Kruskal Wallis uninformed contribution ~ genotype under different cooperative scenarios, echo = FALSE}
+
+
+
+gender <- c('female', 'male')
+
+for(polym in c(3,7,9)){
+
+   for (sex in gender){
+     
+     DB <- subset(DB_Classificated, DB_Classificated$gender == sex)
+    
+       cont <- DB[,10]
+       group <- DB[,polym]
+       df <- data.frame(cont, group)
+       x <- kruskal.test(df[,1], df[,2])
+       
+       print(ifelse(polym == 3, 'oxtr', ifelse(polym==7, 'avpr1', 'maoa')))
+       print(sex)
+       print(x)
+       
+     }
+}
+     
+  
+```
+
+## Supporting Information
+
+```{r S8 Figure. Individual strategies of others, echo = FALSE}
+
+profiles_others <- DB_Classificated %>% 
+  filter(type_20_001 == 'other') %>%
+  select(id, 11:31) %>% 
+  gather("ot_contr", "Contr", 2:22) %>% 
+  mutate(others_contr = case_when(ot_contr == 'coop_inf_0' ~ 0, 
+            ot_contr == 'coop_inf_1' ~ 1,
+            ot_contr == 'coop_inf_2' ~ 2, 
+            ot_contr == 'coop_inf_3' ~ 3,
+            ot_contr == 'coop_inf_4' ~ 4,
+            ot_contr == 'coop_inf_5' ~ 5,
+            ot_contr == 'coop_inf_6' ~ 6,
+            ot_contr == 'coop_inf_7' ~ 7,
+            ot_contr == 'coop_inf_8' ~ 8,
+            ot_contr == 'coop_inf_9' ~ 9,
+            ot_contr == 'coop_inf_10' ~ 10,
+            ot_contr == 'coop_inf_11' ~ 11,
+            ot_contr == 'coop_inf_12' ~ 12,
+            ot_contr == 'coop_inf_13' ~ 13,
+            ot_contr == 'coop_inf_14' ~ 14,
+            ot_contr == 'coop_inf_15' ~ 15,
+            ot_contr == 'coop_inf_16' ~ 16,
+            ot_contr == 'coop_inf_17' ~ 17,
+            ot_contr == 'coop_inf_18' ~ 18,
+            ot_contr == 'coop_inf_19' ~ 19,
+            ot_contr == 'coop_inf_20' ~ 20
+            )) %>% 
+  select(id, others_contr, subject_contr= Contr) 
+
+
+profiles_others_1 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[1:5]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_2 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[6:10]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+  theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_3 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[11:15]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_4 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[16:20]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+   theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_5 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[21:25]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_6 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[26:30]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_7 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[31:35]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_8 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[36:40]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+
+profiles_others_9 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[41:45]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_10 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[46:50]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+profiles_others_11 <- ggplot(filter(profiles_others, id %in% unique(profiles_others$id)[51:56]), aes(x=as.numeric(others_contr), y= subject_contr, colour=as.factor(id))) + 
+  geom_line(size = 0.65)+
+  geom_abline(slope=1, intercept=0, color='black', size= 0.5, linetype = 2) +
+  scale_x_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  scale_y_continuous(limits = c(0, 20), breaks=c(0,2,4,6,8,10,12,14,16,18,20), expand = c(0, 0))+
+  labs(y="Subject's contribution", x="Average contribution of other group members")+
+  theme_bw()+
+    theme(axis.line = element_line(colour = "black"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank(), 
+        axis.text=element_text(size=8, family="Arial"),
+        legend.position = "none", 
+        legend.title=element_blank(),    
+        legend.text=element_text(size= 10),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank())
+
+FigS8 <- grid.arrange(profiles_others_1,
+profiles_others_2,
+profiles_others_3,
+profiles_others_4,
+profiles_others_5, 
+profiles_others_6, 
+profiles_others_7, 
+profiles_others_8, 
+profiles_others_9, 
+profiles_others_10, 
+profiles_others_11)
+
+
+
+#ggsave(plot= FigS4, "FigS4.tiff", width = 11, height = 11, units = "cm", dpi=300, path = here::here("figures"))
+```
+
+
+
