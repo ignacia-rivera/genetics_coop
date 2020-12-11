@@ -1,0 +1,189 @@
+id,gender,oxtr,avpr1_1,avpr1_2,avpr1_339,avpr1_341,avpr1_343,maoa,aporte_desinformado,coop_inf_0,coop_inf_1,coop_inf_2,coop_inf_3,coop_inf_4,coop_inf_5,coop_inf_6,coop_inf_7,coop_inf_8,coop_inf_9,coop_inf_10,coop_inf_11,coop_inf_12,coop_inf_13,coop_inf_14,coop_inf_15,coop_inf_16,coop_inf_17,coop_inf_18,coop_inf_19,coop_inf_20,coop_total,free_rider_10,free_rider_20,free_rider_30,type_10_001,type_20_001,type_30_001,type_10_010,type_20_010,type_30_010
+11131,female,AA,341,343,Long/Long,Short/Long,Short/Short,4.5/4.5 repeats,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+11242,male,GA,335,343,Short/Long,Short/Long,Short/Short,,7,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0.452381,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+11353,female,GG,339,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,4,1,2,1,2,2,1,2,4,4,4,4,3,3,3,2,4,4,4,4,4,5,0.15,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+11464,male,GG,339,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,7,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,0,0,0,0.4071428,0,0,0,other,other,other,other,other,other
+11575,male,GG,339,348,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,1,1,1,2,2,3,4,4,5,5,6,6,7,7,7,8,8,9,9,9,9,0.2690476,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+11686,female,GG,343,345,Long/Long,Long/Long,Short/Long,3.5/4.5 repeats,8,1,3,5,4,2,3,3,3,2,5,2,11,2,8,8,8,1,1,1,0,0,0.1738095,0,0,0,other,other,other,other,other,other
+11797,male,AA,337,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,10,0,0,0,0,1,1,3,4,5,4,5,5,6,6,7,7,8,8,9,9,9,0.2309524,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+11808,male,GG,341,341,Long/Long,Short/Short,Short/Short,3.5/3.5 repeats,7,1,2,3,2,1,3,5,6,7,5,7,7,10,9,11,6,9,15,12,10,0,0.3119048,0,0,0,other,other,other,cond. coop.,cond. coop.,cond. coop.
+11919,female,AA,335,339,Short/Short,Short/Short,Short/Short,3.5/3.5 repeats,8,0,3,3,3,5,5,7,7,9,9,11,11,13,13,15,15,15,15,15,15,15,0.4857143,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+12030,female,GG,339,345,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,5,0,2,2,2,4,3,6,6,4,9,2,3,4,3,2,3,2,0,1,2,0,0.1428571,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+12142,female,GA,339,343,Short/Long,Short/Long,Short/Short,3.5/4.5 repeats,8,0,0,1,2,3,4,5,6,7,8,10,10,11,12,13,14,15,16,17,18,19,0.4547619,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+12254,male,GG,337,351,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,1,0,0,0,other,other,other,other,other,other
+12366,female,GG,343,345,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,15,0,0,2,2,3,4,5,6,6,6,7,8,7,6,7,8,8,9,9,12,15,0.3095238,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+12478,female,GA,339,347,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,10,0,10,9,8,7,6,5,4,3,2,1,0,0,0,0,0,0,0,0,0,0,0.1309524,0,0,0,other,other,other,other,other,other
+12580,male,,352,354,Long/Long,Long/Long,Long/Long,,5,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,0.2619048,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+12692,male,GG,335,337,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,9,0,0,1,1,2,3,2,3,3,4,4,4,4,5,6,5,5,6,6,6,7,0.1833333,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+12704,female,GA,339,341,Short/Long,Short/Short,Short/Short,3.5/4.5 repeats,6,0,10,12,6,5,11,4,0,7,0,2,5,2,4,2,1,3,3,2,4,3,0.2047619,0,0,0,other,other,other,other,other,other
+12816,male,GG,339,343,Short/Long,Short/Long,Short/Short,3.5/3.5 repeats,8,2,2,4,5,3,6,6,8,9,10,9,8,5,5,4,3,2,2,1,1,0,0.2261905,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+13040,female,AA,337,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,0,1,2,3,4,5,6,9,9,10,12,10,12,14,14,15,17,17,19,19,20,0.5190476,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+13153,male,GG,337,349,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,10,0,2,2,3,3,5,7,10,12,15,16,1,15,15,16,14,15,20,19,20,3,0.5071428,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+13266,female,GG,341,343,Long/Long,Short/Long,Short/Short,,12,5,2,3,4,4,5,6,7,7,7,8,9,9,12,12,12,12,12,12,12,12,0.4095238,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+13379,female,GA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,0,0,0,0,0,1,1,3,2,2,2,2,2,3,2,3,3,3,4,4,3,1,0.097619,0,1,1,cond. coop.,free rider,free rider,cond. coop.,free rider,free rider
+13482,male,GG,339,345,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,4,1,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,4,4,5,5,0.1404762,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+13595,female,AA,347,352,Long/Long,Long/Long,Long/Long,,5,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+13608,male,GA,339,343,Short/Long,Short/Long,Short/Short,3.5/3.5 repeats,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,1,0,0,0,other,other,other,other,other,other
+13711,male,AA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,5,0,0,0,1,3,3,2,4,6,13,10,7,14,11,18,15,20,20,20,20,20,0.4928571,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+13824,female,GG,341,345,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,6,1,3,3,8,5,8,7,2,5,11,8,13,8,11,7,8,9,15,2,1,3,0.3285714,0,0,0,other,other,other,other,other,other
+14050,male,GG,339,346,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,7,6,1,4,8,11,15,18,19,20,5,17,2,9,3,6,7,5,8,9,10,2,0.4404762,0,0,0,other,other,other,other,other,other
+14164,male,GG,343,354,Long/Long,Long/Long,Short/Long,3.5/3.5 repeats,4,0,1,1,4,4,4,5,5,8,8,8,12,12,12,15,15,15,15,20,20,20,0.4857143,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+14278,female,GA,337,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,5,9,9,8,8,7,7,6,6,5,5,4,2,2,2,1,1,1,0,0,0,0,0.1976191,0,0,0,other,other,other,other,other,other
+14382,female,GG,343,353,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,5,0,0,1,2,2,4,4,3,2,1,1,8,7,6,6,5,4,3,2,2,0,0.15,0,0,0,other,other,other,hump shaped,hump shaped,hump shaped
+14496,female,GG,339,354,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,2,2,3,0,2,1,2,4,7,8,8,0,7,0,4,3,2,2,7,7,7,20,0.2285714,0,0,0,other,other,other,other,other,other
+14500,female,GG,343,345,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,15,0,0,2,2,4,4,6,6,8,8,10,10,12,12,14,14,16,16,18,18,20,0.4761905,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+14614,male,GG,339,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,1,0,0,1,2,1,4,3,4,5,5,4,3,2,6,5,4,3,2,1,4,0.1428571,0,0,1,other,other,free rider,other,other,free rider
+14728,female,GA,339,345,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,7,1,1,1,1,2,2,2,2,3,3,3,3,2,3,2,3,2,3,2,1,1,0.102381,0,1,1,other,free rider,free rider,hump shaped,free rider,free rider
+14832,female,GG,331,345,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,2,0,1,1,1,2,3,4,5,6,7,8,9,10,9,8,7,6,5,4,3,0,0.2357143,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+14946,male,GG,343,345,Long/Long,Long/Long,Short/Long,3.5/3.5 repeats,5,1,1,4,1,2,5,8,3,4,5,2,9,6,3,10,7,4,7,6,3,4,0.2261905,0,0,0,other,other,other,other,other,other
+15060,male,AA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,10,2,3,4,5,8,10,11,13,15,16,18,16,14,15,13,11,10,8,5,4,3,0.4857143,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+15175,female,GG,335,339,Short/Short,Short/Short,Short/Short,,8,5,5,6,4,7,6,6,5,5,6,7,10,10,10,12,10,12,15,15,15,15,0.4428571,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15280,female,GA,324,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,0,0,0,0,0,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,10,10,0.1190476,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15395,male,AA,339,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,0,0,1,2,2,2,3,3,4,4,4,5,5,6,6,7,7,8,8,9,9,10,0.25,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15400,female,GG,337,353,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,7,0,2,2,2,4,4,4,4,10,10,10,10,12,12,12,20,20,20,20,20,20,0.5190476,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15515,female,GA,339,339,Short/Short,Short/Short,Short/Short,3.5/4.5 repeats,10,0,4,6,5,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,0.4404762,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15620,male,GA,345,347,Long/Long,Long/Long,Long/Long,3.5/3.5 repeats,4,0,3,2,2,2,3,3,6,6,6,7,5,5,4,4,3,3,2,2,1,1,0.1666667,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+15735,female,GA,339,339,Short/Short,Short/Short,Short/Short,,6,0,0,0,1,2,3,4,5,5,5,5,5,6,6,7,7,8,8,9,9,10,0.25,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15840,male,GG,343,356,Long/Long,Long/Long,Short/Long,3.5/3.5 repeats,8,0,0,0,2,2,2,3,5,5,6,8,8,10,11,13,13,15,15,20,20,20,0.4238095,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+15955,female,AA,345,353,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,4,0,0,1,4,4,3,3,4,5,5,6,8,6,6,8,7,7,9,7,5,0,0.2333333,0,0,0,other,other,other,cond. coop.,cond. coop.,cond. coop.
+16070,male,GG,343,347,Long/Long,Long/Long,Short/Long,3.5/3.5 repeats,20,0,3,5,7,6,5,4,3,2,1,0,20,20,20,20,20,20,20,20,20,20,0.5619048,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+16186,female,GA,337,339,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,5,0,0,0,0,1,1,1,1,1,1,1,2,2,2,2,3,3,4,4,4,5,0.0904762,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+16292,female,GG,347,351,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,5,2,4,6,8,9,10,11,13,1,7,9,2,3,6,7,8,4,5,9,11,12,0.35,0,0,0,other,other,other,other,other,other
+16308,female,GG,339,345,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,10,0,2,4,6,9,10,11,11,11,8,7,6,6,6,5,5,4,3,2,0,0,0.2761905,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+16414,male,GA,347,354,Long/Long,Long/Long,Long/Long,,2,0,0,2,2,7,3,3,3,3,3,4,4,4,3,3,3,3,3,2,2,2,0.1404762,0,0,0,other,other,other,hump shaped,hump shaped,hump shaped
+16520,male,GG,337,347,Short/Long,Short/Long,Short/Long,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+16636,female,GA,341,341,Long/Long,Short/Short,Short/Short,3.5/4.5 repeats,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0.0238095,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+16742,male,GG,339,353,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,10,0,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,0.4071428,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+16858,male,GG,326,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,6,0,1,3,4,6,5,8,6,8,5,5,1,10,6,7,5,3,7,4,1,1,0.2285714,0,0,0,other,other,other,other,other,other
+16964,male,GG,337,339,Short/Short,Short/Short,Short/Short,3.5/3.5 repeats,6,2,2,2,3,3,6,6,9,8,11,12,12,12,12,12,11,12,13,16,17,20,0.4785714,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17080,female,GG,347,351,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,8,3,5,6,4,6,5,7,5,7,7,8,9,10,10,10,12,13,13,14,15,15,0.4380952,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17197,male,GA,341,353,Long/Long,Short/Long,Short/Long,,8,0,1,2,3,4,5,6,7,8,9,10,10,10,10,10,10,10,10,10,10,20,0.3928571,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17204,female,GG,339,339,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,5,0,1,1,2,3,5,5,6,7,7,7,7,7,7,7,7,7,7,7,7,7,0.2714286,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17311,male,GA,335,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,5,0,0,1,1,2,2,3,3,4,4,5,5,5,5,5,5,5,5,5,5,5,0.1785714,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+17428,male,GG,345,345,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,8,2,2,2,3,5,5,2,2,3,2,5,5,5,3,1,1,1,1,1,1,10,0.1476191,0,0,0,other,other,other,other,other,other
+17535,female,,341,353,Long/Long,Short/Long,Short/Long,3.5/4.5 repeats,6,0,1,2,5,5,6,7,7,7,7,7,5,6,7,8,8,9,10,11,11,11,0.3333333,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17642,female,GG,345,353,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,6,3,5,6,6,7,8,8,9,10,11,12,9,9,7,7,7,7,7,7,8,8,0.3833333,0,0,0,other,other,other,hump shaped,hump shaped,hump shaped
+17759,male,AA,341,343,Long/Long,Short/Long,Short/Short,4.5/4.5 repeats,5,0,1,1,1,1,1,2,2,3,3,3,3,3,4,4,4,4,4,4,5,5,0.1380952,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+17866,female,GG,341,343,Long/Long,Short/Long,Short/Short,3.5/4.5 repeats,7,1,1,1,2,2,3,3,4,4,5,5,5,5,6,6,6,7,7,8,9,9,0.2357143,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+17973,female,GA,341,353,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,7,0,1,2,3,3,3,3,3,4,5,6,4,3,3,3,2,2,2,1,1,1,0.1309524,0,0,1,hump shaped,hump shaped,free rider,hump shaped,hump shaped,free rider
+18090,female,GA,341,353,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,0,0,0,0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,0.1071429,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+18108,male,GA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,13,0,0,0,3,5,7,7,7,10,10,13,10,10,7,7,7,5,3,0,0,0,0.2642857,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+18216,female,GG,343,345,Long/Long,Long/Long,Short/Long,3.5/4.5 repeats,5,0,3,2,1,0,3,2,1,0,1,2,1,0,1,2,1,0,3,2,1,0,0.0619048,0,1,1,other,free rider,free rider,other,free rider,free rider
+18324,female,GG,341,341,Long/Long,Short/Short,Short/Short,3.5/4.5 repeats,8,1,2,4,5,5,6,7,8,9,11,12,13,13,14,15,16,17,18,18,20,20,0.5571429,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+18432,female,GA,337,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,3,0,0,1,2,3,4,3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0.4476191,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+18540,male,GG,335,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,10,20,16,10,12,16,15,12,10,8,9,20,17,12,13,7,5,8,17,11,10,5,0.6023809,0,0,0,other,other,other,other,other,other
+18658,female,,345,345,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,10,0,2,2,3,3,3,5,1,5,6,8,6,8,9,9,10,10,10,11,11,0,0.2904762,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+18766,male,GG,325,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,10,5,1,10,2,20,5,15,14,2,11,20,1,7,9,4,5,18,14,20,1,17,0.4785714,0,0,0,other,other,other,other,other,other
+18874,female,GA,343,351,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,4,10,9,5,3,2,1,3,3,3,2,1,3,3,3,3,3,3,4,3,3,5,0.1785714,0,0,0,other,other,other,other,other,other
+18982,female,GG,341,343,Long/Long,Short/Long,Short/Short,3.5/4.5 repeats,7,0,1,2,3,4,5,6,7,8,9,10,10,10,10,10,10,10,10,10,15,0,0.3571429,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19000,female,AA,341,348,Long/Long,Short/Long,Short/Long,3.5/3.5 repeats,8,1,2,3,4,5,6,7,8,9,10,11,12,11,10,8,10,10,15,15,15,15,0.4452381,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19119,female,GA,339,341,Short/Long,Short/Short,Short/Short,3.5/4.5 repeats,4,0,1,1,2,2,2,4,4,4,5,5,5,6,6,8,8,10,10,12,12,15,0.2904762,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19228,female,AA,343,345,Long/Long,Long/Long,Short/Long,3.5/4.5 repeats,5,20,20,3,1,2,2,2,3,3,3,3,4,4,4,4,4,5,5,0,0,0,0.2190476,0,0,0,other,other,other,other,other,other
+19337,male,GG,341,341,Long/Long,Short/Short,Short/Short,4.5/4.5 repeats,6,15,12,9,8,6,7,6,7,6,5,5,5,4,4,3,3,2,2,1,1,0,0.2642857,0,0,0,other,other,other,other,other,other
+19446,male,AA,339,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,0,0,1,2,1,2,1,2,1,2,1,2,3,2,1,2,1,2,1,2,1,2,0.0761905,0,1,1,other,free rider,free rider,other,free rider,free rider
+19555,male,GA,339,339,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,6,0,0,0,11,8,5,2,9,9,9,9,10,10,10,12,13,13,13,15,15,15,0.4476191,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19664,female,AA,345,351,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,5,0,0,2,3,3,4,4,5,5,6,6,7,7,8,9,10,11,12,13,14,15,0.3428572,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19773,female,GA,341,345,Long/Long,Short/Long,Short/Long,3.5/3.5 repeats,5,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0,0.5,0,0,0,other,other,other,other,other,other
+19882,male,GA,339,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,5,0,2,2,4,6,10,11,11,12,12,13,13,13,14,15,15,16,16,17,18,20,0.5714286,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+19991,female,GG,341,348,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,6,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,5,4,3,2,1,0,0.2690476,0,0,0,other,other,other,other,other,other
+20020,male,GG,341,345,Long/Long,Short/Long,Short/Long,3.5/3.5 repeats,7,0,0,0,0,5,5,5,5,8,8,8,10,10,10,15,15,15,15,20,20,20,0.4619048,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+20240,male,GG,341,343,Long/Long,Short/Long,Short/Short,,9,0,5,8,4,9,10,9,12,14,13,15,17,2,3,11,20,1,6,7,19,18,0.4833333,0,0,0,other,other,other,other,other,other
+20350,female,AA,345,348,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,15,19,19,17,16,15,14,13,12,11,10,10,9,8,7,6,5,10,8,8,10,10,0.5642857,0,0,0,other,other,other,other,other,other
+20460,female,AA,341,341,Long/Long,Short/Short,Short/Short,3.5/4.5 repeats,9,0,2,4,6,8,10,12,14,16,18,20,20,20,20,20,20,2,4,6,8,20,0.5952381,0,0,0,other,other,other,other,other,other
+20570,male,GA,325,342,Short/Long,Short/Long,Short/Short,3.5/3.5 repeats,8,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+20680,female,GA,345,347,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,10,0,0,0,3,3,5,5,5,8,10,10,10,10,10,10,12,12,15,15,15,15,0.4119048,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+20790,male,GA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,2,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0.452381,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+20800,female,GA,339,339,Short/Short,Short/Short,Short/Short,,10,0,1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,20,20,0.5833333,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+20910,female,GG,343,347,Long/Long,Long/Long,Short/Long,3.5/4.5 repeats,2,0,2,3,4,5,5,6,7,8,9,5,4,3,2,1,0,0,0,0,0,0,0.152381,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+21142,female,GG,343,351,Long/Long,Long/Long,Short/Long,,6,0,3,2,4,5,10,7,9,7,11,12,10,14,15,16,17,18,18,19,20,20,0.5642857,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+21254,male,GG,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,1,0,0,0,1,1,1,1,2,2,2,2,2,3,3,3,4,4,4,4,4,5,0.1142857,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+21366,female,GG,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,10,1,5,7,7,4,6,8,3,13,7,6,10,6,7,10,9,9,15,5,5,10,0.3642857,0,0,0,other,other,other,other,other,other
+21478,female,GG,341,343,Long/Long,Short/Long,Short/Short,3.5/4.5 repeats,2,0,0,0,1,1,2,2,1,2,2,2,3,3,3,3,3,3,3,3,3,4,0.1047619,0,1,1,cond. coop.,free rider,free rider,cond. coop.,free rider,free rider
+21580,female,GA,343,345,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,9,5,5,5,5,5,5,10,10,10,10,10,15,15,15,15,15,15,15,15,20,20,0.5714286,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+21692,male,GG,345,345,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,10,0,0,0,0,4,5,5,5,5,5,10,10,10,10,10,10,10,10,10,10,10,0.3309524,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+21704,female,AA,335,347,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0.047619,0,0,0,other,other,other,other,other,other
+21816,female,GG,345,353,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,2,0,0,0,0,0,0,0,0,2,2,3,3,3,3,3,3,3,3,3,3,3,0.0880952,0,1,1,cond. coop.,free rider,free rider,cond. coop.,free rider,free rider
+21928,female,GG,337,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,6,15,12,14,3,7,8,3,16,5,5,2,4,6,2,3,8,10,6,8,5,3,0.3452381,0,0,0,other,other,other,other,other,other
+22040,female,GA,343,345,Long/Long,Long/Long,Short/Long,4.5/4.5 repeats,15,10,10,10,10,10,10,10,10,10,10,10,20,20,20,20,20,20,20,20,20,20,0.7380952,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+22154,male,GG,337,339,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,16,0,6,4,8,14,1,16,5,6,4,18,9,12,13,15,14,16,11,17,19,20,0.5428572,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+22268,female,GG,324,339,Short/Short,Short/Short,Short/Short,,4,0,2,4,5,7,9,3,2,1,2,0,7,6,6,7,5,4,3,2,1,1,0.1833333,0,0,0,other,other,other,other,other,other
+22372,female,GA,341,347,Long/Long,Short/Long,Short/Long,,10,2,12,15,7,9,6,10,14,16,11,9,8,8,7,6,5,4,3,2,1,0,0.3690476,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+22486,female,GA,341,349,Long/Long,Short/Long,Short/Long,3.5/4.5 repeats,5,0,2,2,5,4,5,4,5,4,6,5,5,5,5,5,5,5,5,5,5,5,0.2190476,0,0,1,other,other,free rider,cond. coop.,cond. coop.,free rider
+22590,female,GA,347,351,Long/Long,Long/Long,Long/Long,,10,0,3,12,18,12,5,6,6,9,11,4,9,10,11,12,10,14,15,16,17,18,0.5190476,0,0,0,other,other,other,cond. coop.,cond. coop.,cond. coop.
+22604,female,GG,324,347,Short/Long,Short/Long,Short/Long,,8,20,19,18,17,16,15,14,13,12,11,10,9,12,11,10,8,6,4,2,0,0,0.5404762,0,0,0,other,other,other,other,other,other
+22718,male,GA,335,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,0,3,4,5,6,5,7,4,4,3,2,3,3,3,4,2,3,2,1,0,0,0.152381,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+23050,female,GG,337,339,Short/Short,Short/Short,Short/Short,3.5/4.5 repeats,4,5,1,2,3,4,5,4,3,2,1,1,5,4,5,4,5,4,5,4,5,5,0.1833333,0,0,1,other,other,free rider,other,other,free rider
+23166,female,GG,339,341,Short/Long,Short/Short,Short/Short,3.5/4.5 repeats,8,0,1,2,3,4,5,6,7,8,9,10,9,8,7,6,5,4,3,2,1,0,0.2380952,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+23272,female,GG,324,334,Short/Short,Short/Short,Short/Short,3.5/4.5 repeats,0,0,0,0,2,2,2,3,3,4,4,4,4,4,4,4,5,5,5,6,6,6,0.1738095,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+23388,male,GA,345,345,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,6,0,2,2,4,3,2,4,8,5,4,3,3,5,6,1,4,5,2,2,4,5,0.1761905,0,0,0,other,other,other,other,other,other
+23494,female,GA,337,347,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,4,6,6,6,6,6,6,6,6,6,6,6,4,4,4,4,4,4,4,4,4,4,0.252381,0,0,1,other,other,free rider,other,other,free rider
+23500,female,GA,339,345,Short/Long,Short/Long,Short/Long,,6,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,20,0.547619,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+23616,female,GG,339,341,Short/Long,Short/Short,Short/Short,,7,0,2,3,5,6,7,7,8,8,9,9,10,12,14,14,15,15,16,17,18,19,0.5095238,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+23722,female,AA,339,351,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,4,0,0,0,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,0.0642857,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+23838,male,GA,339,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,20,5,5,5,10,15,15,15,16,17,18,19,20,20,20,20,20,20,20,20,20,20,0.8095238,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+23944,female,AA,345,347,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,7,0,19,15,18,14,17,13,16,12,11,10,8,9,5,7,4,20,6,2,1,3,0.5,0,0,0,other,other,other,other,other,other
+24060,male,GA,339,341,Short/Long,Short/Short,Short/Short,,4,0,0,0,0,0,0,0,0,0,2,2,3,3,3,3,4,4,4,4,5,5,0.1,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+24178,male,GA,339,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,10,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+24286,male,GA,337,339,Short/Short,Short/Short,Short/Short,3.5/3.5 repeats,18,20,15,12,20,20,15,15,17,11,10,12,13,15,16,16,16,17,18,19,19,20,0.8,0,0,0,other,other,other,other,other,other
+24394,male,GA,337,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,10,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+24402,male,GA,339,345,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+24510,female,GA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,2,0,4,3,4,5,7,8,5,9,11,12,13,10,13,15,13,14,15,17,18,16,0.5047619,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+24628,male,GG,339,345,Short/Long,Short/Long,Short/Long,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+24736,female,GG,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,4,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0.452381,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+24844,female,GA,345,351,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,5,0,2,4,5,4,6,8,9,10,11,8,14,8,10,16,15,15,15,15,0,0,0.4166667,0,0,0,other,other,other,hump shaped,hump shaped,hump shaped
+24952,female,GA,339,339,Short/Short,Short/Short,Short/Short,3.5/4.5 repeats,2,0,0,0,1,1,1,1,1,2,2,2,1,0,1,2,1,0,2,2,1,0,0.05,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+25070,male,GG,339,339,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,9,0,3,3,4,4,5,5,6,6,7,7,4,4,3,3,2,2,1,1,0,0,0.1666667,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+25290,female,GA,344,348,Long/Long,Long/Long,Long/Long,3.5/3.5 repeats,2,0,0,0,0,1,2,2,4,4,5,8,8,8,9,14,11,11,11,12,14,16,0.3333333,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+25300,female,GA,335,345,Short/Long,Short/Long,Short/Long,,0,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+25410,male,GA,341,345,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,7,0,7,6,5,8,7,10,8,7,6,10,9,8,7,6,5,4,3,2,1,0,0.2833333,0,0,0,other,other,other,other,other,other
+25520,male,GG,341,345,Long/Long,Short/Long,Short/Long,3.5/3.5 repeats,6,0,2,3,3,5,6,6,7,7,7,7,8,8,8,8,8,8,8,8,8,8,0.3166667,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+25630,male,GA,339,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0.2,0,1,1,other,free rider,free rider,other,free rider,free rider
+25740,female,GG,341,343,Long/Long,Short/Long,Short/Short,3.5/3.5 repeats,7,0,0,0,1,3,5,5,5,7,7,7,9,9,10,10,10,11,13,15,16,17,0.3809524,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+25850,male,GA,335,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,0,2,3,5,5,5,6,6,6,7,7,7,8,8,9,9,10,10,10,10,10,0.3404762,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+25960,female,GG,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,2,0,1,1,2,2,2,3,3,3,3,4,3,2,1,2,3,3,1,2,1,1,0.102381,0,1,1,other,free rider,free rider,hump shaped,free rider,free rider
+26080,male,GG,339,339,Short/Short,Short/Short,Short/Short,3.5/3.5 repeats,17,0,0,1,1,2,2,6,6,7,10,11,10,15,15,10,14,14,15,17,20,20,0.4666667,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+26192,female,GG,339,341,Short/Long,Short/Short,Short/Short,,7,0,10,10,10,10,10,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,0.6547619,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+26204,female,GG,337,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,6,2,4,2,6,8,9,10,11,12,12,15,16,12,14,17,15,16,17,18,18,18,0.6,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+26316,female,GG,337,337,Short/Short,Short/Short,Short/Short,4.5/4.5 repeats,15,0,0,1,1,2,2,2,3,4,4,4,5,6,7,7,8,8,9,9,10,10,0.2428571,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+26428,female,,347,351,Long/Long,Long/Long,Long/Long,,5,0,1,2,1,4,5,5,5,5,5,5,5,5,5,5,5,5,1,1,1,0,0.1690476,0,0,1,hump shaped,hump shaped,free rider,hump shaped,hump shaped,free rider
+26642,female,GG,335,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,15,3,6,10,14,16,7,6,20,15,10,17,11,16,9,8,12,3,7,16,17,5,0.5428572,0,0,0,other,other,other,other,other,other
+26754,female,GG,337,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,7,0,0,4,5,4,5,7,7,7,4,5,6,4,3,3,5,2,1,2,2,7,0.1976191,0,0,0,other,other,other,other,other,other
+26866,female,AA,341,343,Long/Long,Short/Long,Short/Short,4.5/4.5 repeats,7,0,2,3,5,6,7,8,9,10,11,12,11,10,9,8,7,6,5,4,3,2,0.3285714,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+26978,female,GA,339,354,Short/Long,Short/Long,Short/Long,3.5/4.5 repeats,6,8,8,8,7,7,7,7,7,7,6,6,5,5,5,4,4,3,3,2,1,1,0.2642857,0,0,0,other,other,other,other,other,other
+27090,female,GG,335,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,6,2,3,15,5,7,10,1,0,6,8,4,16,9,13,1,14,11,19,17,18,20,0.4738095,0,0,0,other,other,other,cond. coop.,cond. coop.,cond. coop.
+27104,male,GG,339,339,Short/Short,Short/Short,Short/Short,3.5/3.5 repeats,8,0,1,2,3,4,5,10,10,10,10,10,15,15,15,15,15,20,20,20,20,20,0.5714286,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+27218,male,GG,339,345,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,3,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+27322,female,GA,335,343,Short/Long,Short/Long,Short/Short,3.5/4.5 repeats,10,0,1,2,3,4,5,6,7,8,9,10,10,9,8,7,6,5,4,3,2,1,0.2619048,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+27436,male,GG,345,347,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,1,0,4,5,6,7,8,9,10,10,10,10,0,0,0,0,0,0,0,0,0,0,0.1880952,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+27540,male,AA,343,351,Long/Long,Long/Long,Short/Long,3.5/3.5 repeats,10,0,0,1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,2,1,1,1,0.1976191,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+27654,male,GA,339,347,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,7,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0.0333333,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+27768,male,GG,335,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,10,0,1,2,3,3,3,6,7,8,9,10,10,8,7,6,5,4,3,2,1,0,0.2333333,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+27872,male,GG,337,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,7,0,0,0,1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6,0.15,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+27986,male,GA,339,341,Short/Long,Short/Short,Short/Short,3.5/3.5 repeats,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+28000,male,GA,345,345,Long/Long,Long/Long,Long/Long,3.5/3.5 repeats,0,0,1,5,2,4,0,3,5,5,7,6,4,4,1,2,7,7,8,8,12,10,0.2404762,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28116,female,AA,324,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,5,0,1,2,6,6,2,10,5,9,15,14,4,18,5,3,15,14,17,20,14,20,0.4761905,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28222,male,GA,339,343,Short/Long,Short/Long,Short/Short,4.5/4.5 repeats,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,free rider,free rider,free rider,free rider,free rider,free rider
+28338,male,GG,339,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,10,0,1,2,3,4,5,6,7,8,9,10,10,10,10,10,10,10,10,10,10,10,0.3690476,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28444,male,AA,339,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,5,0,3,5,5,7,7,9,9,9,11,11,13,13,15,15,17,17,19,19,20,20,0.5809524,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28550,male,GG,335,345,Short/Long,Short/Long,Short/Long,3.5/3.5 repeats,3,0,1,1,2,4,5,6,8,7,5,9,5,6,6,7,7,8,8,9,9,10,0.2928571,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28666,female,GA,337,345,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,0,0,1,2,3,0,10,0,0,8,10,0,0,0,0,0,0,0,0,0,0,0,0.0809524,0,0,0,other,other,other,other,other,other
+28772,male,,335,335,Short/Short,Short/Short,Short/Short,,4,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,0.5,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28888,female,GA,341,345,Long/Long,Short/Long,Short/Long,,5,0,1,1,5,5,6,6,8,9,10,10,10,11,12,13,10,11,16,17,18,20,0.4738095,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+28994,female,GG,345,345,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,4,2,3,4,3,4,7,10,10,10,15,12,15,15,15,18,18,18,19,18,19,20,0.6071429,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+29010,female,GA,335,343,Short/Long,Short/Long,Short/Short,3.5/4.5 repeats,7,0,1,3,4,6,6,8,4,4,5,8,7,6,5,3,0,0,0,0,0,0,0.1666667,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+29128,female,GG,,,,,,,8,7,7,9,7,7,5,5,5,5,5,6,6,6,6,6,6,6,6,7,8,9,0.3190476,0,0,0,other,other,other,other,other,other
+29236,female,GA,339,341,Short/Long,Short/Short,Short/Short,3.5/4.5 repeats,4,0,1,4,1,8,5,12,9,8,13,10,7,4,11,8,15,12,9,2,1,1,0.3357143,0,0,0,other,other,other,hump shaped,hump shaped,hump shaped
+29560,male,GG,338,341,Short/Long,Short/Short,Short/Short,,5,10,9,8,7,6,5,4,3,3,3,3,3,3,3,3,5,5,5,5,5,10,0.2571429,0,0,0,other,other,other,other,other,other
+29678,male,GA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,4,0,1,3,2,4,5,8,6,9,7,10,8,11,9,12,10,13,11,14,15,20,0.4238095,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+29786,female,GG,345,351,Long/Long,Long/Long,Long/Long,4.5/4.5 repeats,0,0,1,2,3,4,5,5,6,7,7,9,9,9,10,10,10,11,12,13,14,15,0.3857143,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+29894,female,GG,341,343,Long/Long,Short/Long,Short/Short,3.5/4.5 repeats,5,0,12,13,10,9,6,9,10,7,5,4,5,3,5,3,2,3,4,3,2,1,0.2761905,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+29902,male,GA,,,,,,4.5/4.5 repeats,1,0,1,0,1,1,1,1,1,2,3,5,3,8,7,6,5,4,3,2,1,10,0.1547619,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+30030,female,AA,347,352,Long/Long,Long/Long,Long/Long,3.5/4.5 repeats,7,0,1,1,2,6,12,13,18,15,8,16,11,18,6,12,9,10,14,16,9,10,0.4928571,0,0,0,other,other,other,other,other,other
+30250,male,AA,339,341,Short/Long,Short/Short,Short/Short,4.5/4.5 repeats,5,0,0,1,1,1,2,2,3,3,3,4,4,5,5,6,6,6,6,6,6,7,0.1833333,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+30360,female,GG,339,341,Short/Long,Short/Short,Short/Short,3.5/4.5 repeats,8,0,0,0,0,0,5,5,5,5,5,10,10,10,10,10,12,12,12,12,15,20,0.3761905,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+30470,female,GA,338,341,Short/Long,Short/Short,Short/Short,,5,20,19,18,17,16,15,14,13,12,11,10,10,12,13,14,15,16,17,18,19,20,0.7595238,0,0,0,other,other,other,other,other,other
+30580,female,AA,333,341,Short/Long,Short/Short,Short/Short,,3,0,2,1,4,5,4,3,2,7,5,9,7,6,10,7,10,15,12,11,17,20,0.3738095,0,0,0,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.,cond. coop.
+30690,male,GA,339,347,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,7,0,0,0,1,1,1,2,2,2,3,3,3,3,4,4,5,5,4,4,5,5,0.1357143,0,0,1,cond. coop.,cond. coop.,free rider,cond. coop.,cond. coop.,free rider
+30700,male,GG,339,351,Short/Long,Short/Long,Short/Long,4.5/4.5 repeats,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,1,0,0,0,other,other,other,other,other,other
+30810,female,AA,341,345,Long/Long,Short/Long,Short/Long,4.5/4.5 repeats,8,0,2,4,4,4,4,5,8,8,10,10,10,10,10,5,5,5,5,5,5,0,0.2833333,0,0,0,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped,hump shaped
+30920,male,,,,,,,3.5/3.5 repeats,4,0,1,2,3,4,5,4,3,2,1,3,3,2,2,2,2,3,1,2,2,4,0.1214286,0,0,1,other,other,free rider,other,other,free rider
