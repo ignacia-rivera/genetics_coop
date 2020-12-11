@@ -9,7 +9,7 @@ __Correspondence to:__ María Ignacia Rivera Hechem, Bren School of Environmenta
 
 ## This repository
 
-This repository contains all the necessary material (i.e., data and code) to reproduce the results in the manuscript \"No association between genetic variants in <i>MAOA, OXTR,<i> and <i>AVPR1a<i> and cooperative strategies\". The folders in this repository are described below.
+This repository contains all the necessary material (i.e., data and code) to reproduce the results in the manuscript \"No association between genetic variants in MAOA, OXTR, and AVPR1a and cooperative strategies". The folders in this repository are described below.
  
 __1. data:__ stores the database called "DB_classificated", which contains each subject's gender, genotypes and decision in the public good game. It also contains subject's cooperative strategy under different classification criterion. The database is stored in two formats so it can be read in R and Stata. 
 
